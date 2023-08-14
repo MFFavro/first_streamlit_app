@@ -34,4 +34,4 @@ my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)
 
-add_my_fruit = INSERT fruit_load_list (FRUIT_NAME) VALUE (fruit_choice)
+my_cur.execute("INSERT fruit_load_list (FRUIT_NAME) VALUE (fruit_choice)")
